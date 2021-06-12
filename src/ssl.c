@@ -13389,11 +13389,6 @@ int wolfSSL_Cleanup(void)
         ret = WC_CLEANUP_E;
     }
 
-#ifdef HAVE_GLOBAL_RNG
-    if (wc_FreeMutex(&globalRNGMutex) != 0) {
-        ret = BAD_MUTEX_E;
-    }
-#endif
     return ret;
 }
 
